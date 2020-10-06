@@ -8,7 +8,7 @@ import UIKit
 import SnapKit
 
 protocol LoggedOutPresentableListener: AnyObject {
-    
+    func login(withPlayer1Name player1Name: String?, player2Name: String?)
 }
 
 final class LoggedOutViewController: UIViewController, LoggedOutPresentable, LoggedOutViewControllable {
