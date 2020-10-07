@@ -17,13 +17,13 @@
 import RIBs
 import UIKit
 
-/// Game app delegate.
-@UIApplicationMain
+@main
 public class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    /// The window.
     public var window: UIWindow?
 
+    private var launchRouter: LaunchRouting?
+    
     /// Tells the delegate that the launch process is almost done and the app is almost ready to run.
     ///
     /// - parameter application: Your singleton app object.
@@ -35,14 +35,11 @@ public class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
 
-        let launchRouter = RootBuilder(dependency: AppComponent()).build()
+        let appComponent = AppComponent()
+        let launchRouter = RootBuilder(dependency: appComponent).build()
         self.launchRouter = launchRouter
         launchRouter.launch(from: window)
 
         return true
     }
-
-    // MARK: - Private
-
-    private var launchRouter: LaunchRouting?
 }
