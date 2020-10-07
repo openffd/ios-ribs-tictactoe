@@ -26,6 +26,9 @@ protocol RootViewControllable: ViewControllable {
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
+    func routeToLoggedIn(withPlayer1Name player1Name: String, player2Name: String) {
+        
+    }
 
     init(interactor: RootInteractable,
          viewController: RootViewControllable,
