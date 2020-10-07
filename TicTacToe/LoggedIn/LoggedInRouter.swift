@@ -10,14 +10,26 @@ protocol LoggedInInteractable: Interactable {
 }
 
 protocol LoggedInViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    // TODO: Declare methods the router invokes to manipulate the view hierarchy. Since
+    // this RIB does not own its own view, this protocol is conformed to by one of this
+    // RIB's ancestor RIBs' view.
 }
 
-final class LoggedInRouter: ViewableRouter<LoggedInInteractable, LoggedInViewControllable>, LoggedInRouting {
+final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
 
     // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: LoggedInInteractable, viewController: LoggedInViewControllable) {
-        super.init(interactor: interactor, viewController: viewController)
+    init(interactor: LoggedInInteractable, viewController: LoggedInViewControllable) {
+        self.viewController = viewController
+        super.init(interactor: interactor)
         interactor.router = self
     }
+
+    func cleanupViews() {
+        // TODO: Since this router does not own its view, it needs to cleanup the views
+        // it may have added to the view hierarchy, when its interactor is deactivated.
+    }
+
+    // MARK: - Private
+
+    private let viewController: LoggedInViewControllable
 }
