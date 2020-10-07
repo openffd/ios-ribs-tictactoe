@@ -12,6 +12,10 @@
 		81CB8CA9252CD7BC0009DAC3 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB8CA5252CD7BC0009DAC3 /* LoggedOutViewController.swift */; };
 		81CB8CAA252CD7BC0009DAC3 /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB8CA6252CD7BC0009DAC3 /* LoggedOutBuilder.swift */; };
 		81CB8CAB252CD7BC0009DAC3 /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB8CA7252CD7BC0009DAC3 /* LoggedOutInteractor.swift */; };
+		81CB8CBD252E2C390009DAC3 /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB8CB9252E2C390009DAC3 /* LoggedInRouter.swift */; };
+		81CB8CBE252E2C390009DAC3 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB8CBA252E2C390009DAC3 /* LoggedInViewController.swift */; };
+		81CB8CBF252E2C390009DAC3 /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB8CBB252E2C390009DAC3 /* LoggedInBuilder.swift */; };
+		81CB8CC0252E2C390009DAC3 /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CB8CBC252E2C390009DAC3 /* LoggedInInteractor.swift */; };
 		AEFA38604D7D1E4A08E9A7FA /* Pods_TicTacToe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99EABB5C8D25341027C05C5 /* Pods_TicTacToe.framework */; };
 		E9CB1D521F97303800D84847 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB1D351F972FD500D84847 /* AppDelegate.swift */; };
 		E9CB1D531F97305A00D84847 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB1D341F972FD500D84847 /* AppComponent.swift */; };
@@ -28,6 +32,10 @@
 		81CB8CA5252CD7BC0009DAC3 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
 		81CB8CA6252CD7BC0009DAC3 /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
 		81CB8CA7252CD7BC0009DAC3 /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
+		81CB8CB9252E2C390009DAC3 /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
+		81CB8CBA252E2C390009DAC3 /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		81CB8CBB252E2C390009DAC3 /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
+		81CB8CBC252E2C390009DAC3 /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
 		833B15CABE3CBE09720A0409 /* Pods-TicTacToe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TicTacToe/Pods-TicTacToe.debug.xcconfig"; sourceTree = "<group>"; };
 		A791EBDAD202886E66137B9C /* Pods-TicTacToe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TicTacToe.release.xcconfig"; path = "Pods/Target Support Files/Pods-TicTacToe/Pods-TicTacToe.release.xcconfig"; sourceTree = "<group>"; };
 		B99EABB5C8D25341027C05C5 /* Pods_TicTacToe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TicTacToe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +79,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		81CB8CB8252E2C210009DAC3 /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				81CB8CB9252E2C390009DAC3 /* LoggedInRouter.swift */,
+				81CB8CBA252E2C390009DAC3 /* LoggedInViewController.swift */,
+				81CB8CBB252E2C390009DAC3 /* LoggedInBuilder.swift */,
+				81CB8CBC252E2C390009DAC3 /* LoggedInInteractor.swift */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
 		E9894B411F972CC500688FCB = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +114,7 @@
 				7EDD59511FA135E9005EC8B2 /* Resources */,
 				E9CB1D331F972FD500D84847 /* AppStart */,
 				E9CB1D421F972FE400D84847 /* LoggedOut */,
+				81CB8CB8252E2C210009DAC3 /* LoggedIn */,
 				E9CB1D361F972FE400D84847 /* Root */,
 				E9894B591F972CC500688FCB /* Info.plist */,
 			);
@@ -261,7 +281,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CB8CBF252E2C390009DAC3 /* LoggedInBuilder.swift in Sources */,
+				81CB8CBE252E2C390009DAC3 /* LoggedInViewController.swift in Sources */,
 				E9CB1D521F97303800D84847 /* AppDelegate.swift in Sources */,
+				81CB8CBD252E2C390009DAC3 /* LoggedInRouter.swift in Sources */,
 				81CB8CAA252CD7BC0009DAC3 /* LoggedOutBuilder.swift in Sources */,
 				E9CB1D641F9730EF00D84847 /* RootInteractor.swift in Sources */,
 				E9CB1D631F9730EF00D84847 /* RootComponent+LoggedOut.swift in Sources */,
@@ -271,6 +294,7 @@
 				E9CB1D531F97305A00D84847 /* AppComponent.swift in Sources */,
 				E9CB1D651F9730EF00D84847 /* RootRouter.swift in Sources */,
 				E9CB1D661F9730EF00D84847 /* RootViewController.swift in Sources */,
+				81CB8CC0252E2C390009DAC3 /* LoggedInInteractor.swift in Sources */,
 				81CB8CA9252CD7BC0009DAC3 /* LoggedOutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
